@@ -2,7 +2,7 @@
   "name": "react-antd-admin",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://liuningchuan.github.io/react-antd-admin",
+  "homepage": "https://liuningchuan.github.io/react-antd-blog",
   "dependencies": {
     "antd": "^3.16.1",
     "highlight.js": "^9.15.6",
