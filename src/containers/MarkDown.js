@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 
 import marked from 'marked';
 import hljs from 'highlight.js';
-import 'highlight.js/styles/github.css';
+import 'highlight.js/styles/monokai.css';
 
 import AppMarkdown from './add.md';
-import "./MarkDown.scss";
 
 marked.setOptions({
     renderer: new marked.Renderer(),
@@ -39,7 +38,7 @@ class MarkDown extends Component {
     }
     render() {
         return (
-            <div className="pre" dangerouslySetInnerHTML={{ __html: marked(this.state.markdown) }}></div>
+            <div dangerouslySetInnerHTML={{ __html: marked(this.state.markdown) }}></div>
         )
     }
 }
