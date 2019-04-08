@@ -1,3 +1,9 @@
+/**
+ * @author LiuNing
+ * @since 2019-04-08
+ * @description 头部Header
+ * 使用antd Row Col的xs sm响应式栅格布局实现移动端适配
+ */
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 
@@ -10,11 +16,23 @@ class Header extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            visible: true,
+            visible: false,
         }
     }
 
+    handleVisibleChange = (visible) => {
+		this.setState({ visible: !this.state.visible });
+	}
+
     render() {
+        const links = [
+			{key: "", text: '主页'},
+			{key: "article", text: '文章'},
+			{key: "timeline", text: '归档'},
+			{key: "gather", text: '点滴'},
+			{key: "gossip", text: '慢生活'},
+			// {key: "gossip", text: '碎言碎语'}
+		];
         return (
             <div className="header-wrapper">
                 <div className="container">
@@ -30,11 +48,18 @@ class Header extends Component {
                                 <Icon type={this.state.visible ? 'menu-unfold' : 'menu-fold'} onClick={this.handleVisibleChange} />
                             </div>
                             <div className="navbar-collapse-body" style={{ height: this.state.visible ? 280 : 0 }}>
-                                <Link to="/" data-key="/">主页</Link>
-                                <Link to="/article" data-key="/article">文章</Link>
-                                <Link to="/timeline" data-key="/timeline">归档</Link>
-                                <Link to="/gather" data-key="/gather">点滴</Link>
-                                <Link to="/gossip" data-key="/gossip">慢生活</Link>
+                                <Col sm={0}>
+                                    <div onClick={this.onClick}>
+                                        {
+                                            links.map((item) => (
+                                         
+                                                   <p className="navbar-item" key={item.key}>
+                                                        <Link to={"/" + item.key} data-key={item.key} onClick={this.handleVisibleChange}>{item.text}</Link>
+                                                    </p>
+                                            ))
+                                        }
+                                    </div>
+                                </Col>
                             </div>
                         </Col>
                     </div>
