@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/react-antd-blog/static/css/3.29bca365.chunk.css"
   },
   {
-    "revision": "8012441a2542bafeebdd",
+    "revision": "9abac0de4ed6e0f32178",
     "url": "/react-antd-blog/static/css/main.730af82c.chunk.css"
   },
   {
@@ -16,12 +16,12 @@ self.__precacheManifest = [
     "url": "/react-antd-blog/static/media/add.4ba7a02e.md"
   },
   {
-    "revision": "11db25d72402d1e23053",
-    "url": "/react-antd-blog/static/js/2.bba566f1.chunk.js"
+    "revision": "05cc352a99ebc670807a",
+    "url": "/react-antd-blog/static/js/2.77211cc7.chunk.js"
   },
   {
-    "revision": "8012441a2542bafeebdd",
-    "url": "/react-antd-blog/static/js/main.1dff5677.chunk.js"
+    "revision": "9abac0de4ed6e0f32178",
+    "url": "/react-antd-blog/static/js/main.35307fa4.chunk.js"
   },
   {
     "revision": "550ee256052a826d6687",
@@ -36,11 +36,11 @@ self.__precacheManifest = [
     "url": "/react-antd-blog/static/media/me.daa533e3.jpg"
   },
   {
-    "revision": "11db25d72402d1e23053",
+    "revision": "05cc352a99ebc670807a",
     "url": "/react-antd-blog/static/css/2.e0f9b0f9.chunk.css"
   },
   {
-    "revision": "46c60c5d81c2c5c47b6b2b8af040f4d7",
+    "revision": "4e43ecc2edc6de0b5b5a9360be9290b9",
     "url": "/react-antd-blog/index.html"
   }
 ];
