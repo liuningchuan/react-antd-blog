@@ -16,23 +16,22 @@ class Header extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            visible: false,
+            visible: false, //小屏时菜单显示与否
         }
     }
 
-    handleVisibleChange = (visible) => {
-		this.setState({ visible: !this.state.visible });
-	}
+    handleVisibleChange = () => {
+        this.setState({ visible: !this.state.visible });
+    }
 
     render() {
         const links = [
-			{key: "", text: '主页'},
-			{key: "article", text: '文章'},
-			{key: "timeline", text: '归档'},
-			{key: "gather", text: '点滴'},
-			{key: "gossip", text: '慢生活'},
-			// {key: "gossip", text: '碎言碎语'}
-		];
+            { key: "/", text: '主页' },
+            { key: "/article", text: '文章' },
+            { key: "/timeline", text: '归档' },
+            { key: "/gather", text: '点滴' },
+            { key: "/gossip", text: '慢生活' },
+        ];
         return (
             <div className="header-wrapper">
                 <div className="container">
@@ -52,10 +51,9 @@ class Header extends Component {
                                     <div onClick={this.onClick}>
                                         {
                                             links.map((item) => (
-                                         
-                                                   <p className="navbar-item" key={item.key}>
-                                                        <Link to={"/" + item.key} data-key={item.key} onClick={this.handleVisibleChange}>{item.text}</Link>
-                                                    </p>
+                                                <p className="navbar-item" key={item.key}>
+                                                    <Link to={item.key} data-key={item.key} onClick={this.handleVisibleChange}>{item.text}</Link>
+                                                </p>
                                             ))
                                         }
                                     </div>
