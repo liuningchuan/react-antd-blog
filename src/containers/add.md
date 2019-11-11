@@ -20,7 +20,7 @@
 - **Default Parameters**（默认参数）
 
   ```javascript
-  const link = function(height = 50, color = 'red, url = 'https://open.fbank.com'){
+  const link = function(height = 50, color = 'red, url = 'https://baidu.com'){
   	...
   }
   ```
